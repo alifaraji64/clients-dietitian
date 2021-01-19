@@ -38,7 +38,7 @@
          <h2 class="text-2xl text-green-700">3,292,745</h2>
       </div>
       <div id="button" class="mt-4">
-        <router-link to="/" class="bg-green-500 text-white text-lg py-1 px-3 rounded-md">CONTACT SUPPORT</router-link>
+        <router-link to="/" class="bg-green-600 text-white text-lg py-1 px-3 rounded-md">CONTACT SUPPORT</router-link>
       </div>
     </section>
 
@@ -46,7 +46,7 @@
       <div id="img" class=" flex justify-end">
         <img src="@/assets/images/nutritions-icon.png" width="150" alt="">
       </div>
-      <h2 class="text-2xl text-green-500 font-semibold mb-2">Afspraken</h2>
+      <h2 class="text-2xl text-green-600 font-semibold mb-2">Afspraken</h2>
       <div id="calendar" class="mb-3 mx-auto text-center">
         <vc-date-picker v-model="date" />
       </div>
@@ -89,5 +89,7 @@ export default {
 }
 </script>
 <style>
-
+#banner{
+  min-width:350px;
+}
 </style>

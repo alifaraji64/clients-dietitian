@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.recipe-input{
+   
+        @apply pl-2 border-2 w-3/4 rounded-xl border-gray-400 bg-transparent focus:outline-none;
+    
+}
