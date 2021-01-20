@@ -3,62 +3,52 @@
     <SideBar />
 
     <section class="bg-gray-100 w-10/12 p-4 sm:w-full">
-        <header class="flex items-center">
-            <h1 class="text-3xl font-bold text-gray-800">Recepent</h1>
-            <div id="search-box" class="w-1/2 border-gray-400 border-2 rounded-2xl ml-40 flex">
+        <header class="flex items-center justify-between">
+            <h1 class="text-3xl font-bold text-green-800">Recepten</h1>
+            <div id="search-box" class="w-2/5 border-gray-400 border-2 rounded-2xl ml-40 flex h-8 sm:ml-4">
                 <input type="text" placeholder="Zoek Recepten" class="w-11/12 bg-transparent focus:outline-none pl-2 sm:w-9/12">
                 <button class="bg-green-500 text-white w-1/12 rounded-full sm:w-3/12">GA</button>
             </div>
+            <div id="icons" class="-mr-16 z-10 sm:m-0 flex items-center ">
+                <i class="far fa-bell fa-2x cursor-pointer"></i>
+                <div id="profile-image" class="cursor-pointer w-10 p-0.5 rounded-md bg-blue-400 flex justify-center items-end ml-4">
+                    <i class="fas fa-user-alt fa-2x text-white"></i>
+                </div>
+            </div>
         </header>
         <div id="links" class="flex justify-start text-white my-8">
-            <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Nieuw Recept</router-link>
+            <router-link to="/new-recipes" class="bg-green-500 mx-2 p-2 rounded-xl">Nieuw Recept</router-link>
             <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Mijn Recepten</router-link>
             <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Recept Promoten</router-link>
         </div>
-        <div id="main" class="border-2 border-gray-400 rounded-md p-3 sm:p-2 flex">
-                <div id="upload-image" class="w-1/3 bg-gray-300 rounded-md h-60 border-gray-600 border-2 flex justify-center items-center flex-col p-4 relative">
-                    <i class="far fa-file fa-7x  pointer-events-none text-gray-600" ></i>
-                    <input type="file" class="opacity-0 border-primary cursor-pointer ml-16 absolute w-full h-full left-0 top-0">
+        <div id="main" class="border-2 border-gray-400 rounded-md p-3 sm:p-2">
+            <h3 class="text-green-600 text-lg font-semibold">Recepten Data</h3>
+            <hr>
+            <div id="charts" class="flex p-4 items-center">
+                <vc-donut :sections="sections" :thickness='30' class="mr-4 sm:mr-8 sm:ml-10 w-1/4 transform sm:scale-60"></vc-donut>
+                <div id="bar-chart" class="w-3/4 flex flex-col sm:ml-4">
+                    <section v-for="(section,index) in sections" :key="index" class="flex items-center my-2 w-full">
+                    <label class="mr-2 text-green-800">{{section.label}}</label>
+                    <div class="p-1 text-white font-semibold" :style="{background:section.color,width:section.value+'%'}">{{section.text}}</div>
+                    </section>
                 </div>
-                <div id="form" class="w-2/3 p-3 ml-4">
-                    <div id="row" class="mb-5">
-                        <label class="font-semibold">Titel</label>
-                        <br>
-                        <input type="text" placeholder="Coffe Bean and Banana Soup" class="recipe-input">
-                    </div>
-                    <div id="row" class="my-6 sm:my-4">
-                        <label class="font-semibold">URL</label>
-                        <br>
-                        <input type="text" placeholder="myrecipe.com" class="recipe-input">
-                    </div>
-                    <div id="row" class="my-6 sm:my-4">
-                        <label class="font-semibold">Ingredient</label>
-                        <br>
-                        <input type="text" placeholder="Coffe Beans" class="recipe-input">
-                    </div>
-                    <div id="row" class="my-6 sm:my-4">
-                        <label class="font-semibold">Allergien</label>
-                        <br>
-                        <div class="flex items-center">
-                            <img src="@/assets/images/nutritions-icon.png" width="150" alt="">
-                            <button class="bg-green-600 text-white font-bold px-0.5 text-xl rounded-md ml-4">+</button>
-                        </div>
-                    </div>
-                    <div id="row" class="my-6 sm:my-4">
-                        <label class="font-semibold">Keuken</label>
-                        <br>
-                        <input type="text" placeholder="BBQ" class="recipe-input">
-                    </div>
-                    <div id="row" class="my-6 sm:my-4">
-                        <label class="font-semibold">Type</label>
-                        <br>
-                        <input type="text" placeholder="BREAKFAST" class="recipe-input">
-                    </div>
-                    <div id="buttons" class="flex justify-end">
-                        <button class="rounded-md text-white text-lg mr-2 bg-gray-500 px-2">Annuleer</button>
-                        <button class="rounded-md text-white text-lg ml-2 bg-green-600 px-2">Verstuur</button>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div id="links" class="flex justify-start mt-8 sm:flex-wrap sm:justify-around">
+            <div id="item" class="ml-8 sm:m-0 sm:my-4">
+                <p>Nieuw Recept Gemaakt?</p>
+                <section class="flex justify-between items-center flex-col bg-gray-300 border-2 border-gray-700 p-2 rounded-md">
+                    <span class="iconify" data-icon="fa-solid:book" data-inline="false"></span>
+                    <router-link to="/new-recipe" class="font-semibold mt-4">Upload uw recept!</router-link>
+                </section>
+            </div>
+            <div id="item" class="ml-8 sm:m-0 sm:my-4">
+                <p>Nieuw Recept Noding?</p>
+                <section class="flex justify-between items-center flex-col bg-gray-300 border-2 border-gray-700 p-2 rounded-md">
+                    <span class="iconify" data-icon="mdi:magnify" data-inline="false"></span>
+                    <router-link to="#" class="font-semibold mt-4">Zoek een recept!</router-link>
+                </section>
+            </div>
         </div>
     </section>
     <section class="bg-gray-100 w-1/12 text-center sm:hidden">
@@ -76,13 +66,17 @@ export default {
   },
   data(){
     return{
-
+        sections: [
+            { value: 75/2,color:'#f5eb25',label:'Recept 1', text:300 },
+            { value: 100/4,color:'orange',label:'Recept 2', text:130 },
+            { value: 75/2,color:'#00c486',label:'Recept 3', text:100 }
+            ]
     }
   }
 
 
 }
 </script>
-<style>
-
+<style scoped>
+.iconify { width: 55px; height: 55px;color:white;stroke: rgb(66, 66, 66); }
 </style>

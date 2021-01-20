@@ -14,13 +14,22 @@ const routes = [
     path: '/recipes',
     name: 'recipes',
     component: () => import("../views/recipes.vue"),
-  }
-  ,
+  },
+  {
+    path: '/new-recipes',
+    name: 'new-recipes',
+    component: () => import("../views/new-recipes.vue"),
+  },
   {
     path: '/profile',
     name: 'profile',
     component: () => import("../views/profile.vue"),
-  }
+  },
+  {
+    path: '/patients',
+    name: 'patients',
+    component: () => import("../views/patients.vue"),
+  },
 ]
 
 const router = new VueRouter({
