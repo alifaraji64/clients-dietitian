@@ -1,5 +1,5 @@
 <template>
-  <main class="flex min-h-screen">
+  <main class="flex min-h-screen pb-24">
     <SideBar />
 
     <section class="bg-gray-100 w-10/12 p-4 sm:w-full">

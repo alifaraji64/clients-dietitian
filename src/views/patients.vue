@@ -4,7 +4,7 @@
 
     <section class="bg-gray-100 w-10/12 p-4 sm:w-full sm:p-2">
         <header class="flex items-center">
-            <h1 class="text-3xl font-bold text-green-800">Patienten</h1>
+            <h1 class="text-3xl font-bold text-green-800">patiënten</h1>
             <div id="search-box" class="w-2/3 border-gray-400 border-2 rounded-2xl ml-40 flex h-8 sm:ml-20">
                 <input type="text" placeholder="Zoek Recepten" class="w-11/12 bg-transparent focus:outline-none pl-2 sm:w-9/12">
                 <button class="bg-green-500 text-white w-1/12 rounded-full sm:w-3/12">GA</button>
@@ -17,7 +17,9 @@
                         <img src="@/assets/images/lady.png" class="object-cover object-center w-full h-full visible rounded-lg" alt="">
                     </section>
                     <section id="details" class="ml-2">
-                        <h2 class="text-gray-700 font-semibold text-2xl sm:text-lg">Ashley Scott</h2>
+                        <router-link to="/profile-detail">
+                            <h2 class="text-gray-700 font-semibold text-2xl sm:text-lg">Ashley Scott</h2>
+                        </router-link>
                         <div class="text-gray-600 sm:flex sm:flex-col">
                             <span class="mx-1">Leeftijd</span>
                             <span class="mx-1">Lengte</span>

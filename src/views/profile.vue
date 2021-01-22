@@ -18,45 +18,45 @@
                     <section id="column-1" class=" mx-3 w-1/2 sm:mx-0">
                         <div class="mb-4">
                             <label class="text-gray-400 text-lg">Naam</label>
-                            <h1 class="text-3xl ml-4 font-semibold">{{info.name}}</h1>
+                            <input type="text" :value="info.name" class="bg-transparent text-3xl block ml-4 sm:text-xl">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">E-mail</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.email}}</h3>
+                            <input type="text" :value="info.email" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">KVK-Number</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.KVK}}</h3>
+                            <input type="text" :value="info.KVK" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">BTW-Number</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.BTW}}</h3>
+                            <input type="text" :value="info.BTW" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">IBAN</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.IBAN}}</h3>
+                            <input type="text" :value="info.IBAN" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                     </section>
                     <section id="column-2" class=" mx-3 w-1/2 sm:m-0">
                         <div class="mb-4">
                             <label class="text-gray-400 text-lg">Bedrijfsnaam</label>
-                            <h1 class="text-3xl ml-4 font-semibold">Diets De Vos</h1>
+                             <input type="text" value="Diets De Vos" class="bg-transparent text-3xl block font-semibold ml-4 sm:text-xl">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">Website</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.website}}</h3>
+                            <input type="text" :value="info.website" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">Language</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.language}}</h3>
+                            <input type="text" :value="info.language" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">Adress</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.address}}</h3>
+                            <textarea rows="5" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm" :value='info.address'></textarea>
                         </div>
                         <div class="my-4">
                             <label class="text-gray-400 text-lg">Specialities</label>
-                            <h3 class="text-xl ml-4 font-semibold">{{info.specialities}}</h3>
+                            <input type="text" :value="info.specialities" class="bg-transparent text-xl block font-semibold ml-4 sm:text-sm">
                         </div>
                         <div id="buttons" class="flex justify-end mt-16">
                             <button class="rounded-md text-white text-lg mr-2 bg-gray-500 px-2">Annuleer</button>

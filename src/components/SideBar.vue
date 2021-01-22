@@ -4,40 +4,42 @@
             <img src="@/assets/images/sidebar-top.png" width="200" class='p-2 rounded-2xl' alt="">
         </div>
         <div id="links" class="flex items-center flex-col text-white relative h-5/6 sm:flex-row sm:justify-around">
-            <router-link to="/" class="mb-4 mt-8 sm:my-3">
-                <img src="@/assets/images/icons/home.png" class="sm:w-16 sm:py-4" alt="home">
+            <router-link to="/" class="mb-4 mt-16 sm:my-3" id="home">
+                <img src="@/assets/images/icons/home.png" class="sm:w-16" alt="home">
             </router-link>
 
-            <router-link to="/profile" class="my-3">
-                <img src="@/assets/images/icons/profile.png" class=" sm:w-16" alt="home">
+            <router-link to="/profile" class="my-3" id="profile">
+                <img src="@/assets/images/icons/profile.png" class=" sm:w-16" alt="profile">
             </router-link>
 
-            <router-link to="/recipes" class="my-3">
-                <img src="@/assets/images/icons/spoon-fork.png" class="sm:w-16" alt="home">
+            <router-link to="/recipes" class="my-3" id="spoon-fork">
+                <img src="@/assets/images/icons/spoon-fork.png" class="sm:w-16" alt="spoon-fork">
             </router-link>
 
-            <router-link to="/patients" class="my-3">
-                <img src="@/assets/images/icons/add.png" class="sm:w-16" alt="home">
-            </router-link>
-
-            <router-link to="/f" class="absolute bottom-0 pb-1 sm:relative mb-3 sm:mb-0 sm:pb-0">
+            <router-link to="/patients" class="absolute bottom-0 pb-1 sm:relative mb-3 sm:mb-0 sm:pb-0" id="settings">
                 <img src="@/assets/images/icons/settings.png" class="sm:w-16" alt="home">
             </router-link>
         </div>
     </nav>
 </template>
 
-<script>
+<script scoped>
 export default {
+    mounted(){
+        console.log(this.$router.currentRoute.path);
+        if(this.$router.currentRoute.path != '/new-recipes'){
+            const activeLink = document.querySelector('.router-link-exact-active');
+            let id = activeLink && activeLink.id;
+            console.log(id);
+            if(activeLink)activeLink.innerHTML = `<img src="./assets/images/green-icons/${id}-g.png" class="sm:w-16 w-24 transform translate-x-10 sm:translate-x-0 bg-white"/>`;
+        }
 
+        //activeLink.append(greenIcon);
+    }
 }
 </script>
 
 <style scoped>
-    .router-link-exact-active{
-        padding-left: 3px;
-        border-bottom: 5px solid white;
-    }
     a img{
         max-width: 95px;
         min-width: 50px;

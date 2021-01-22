@@ -30,6 +30,16 @@ const routes = [
     name: 'patients',
     component: () => import("../views/patients.vue"),
   },
+  {
+    path: '/search-result',
+    name: 'search-result',
+    component: () => import("../views/search-result.vue"),
+  },
+  {
+    path: '/profile-detail',
+    name: 'profile-detail',
+    component: () => import("../views/profile-detail.vue"),
+  },
 ]
 
 const router = new VueRouter({
