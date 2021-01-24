@@ -3,7 +3,7 @@
     <SideBar />
 
     <section class="bg-gray-100 w-8/12 p-4 sm:w-full">
-      <h1 class="text-3xl font-bold text-gray-800">Home</h1>
+      <h1 class="text-3xl font-bold text-green-800 sm:text-2xl">Home</h1>
       <div id="banner" class="bg-green-700 mt-8 w-3/4 mx-auto p-4 rounded-xl flex items-center justify-between">
         <div id="text" class="text-white">
           <h1 class="text-3xl">Hallo Zee,</h1>
@@ -25,7 +25,7 @@
       <div id="chart" class="mt-8 shadow-lg text-center p-2 rounded-lg">
         <h2 class="text-2xl text-green-500">Klanten</h2>
         <br>
-          <la-cartesian :bound="[0]" :data="chartData" class="transform sm:-translate-x-20 sm:scale-60 mx-auto">
+          <la-cartesian :bound="[0]" :data="chartData" class="transform sm:-translate-x-28 sm:scale-60 mx-auto">
             <defs>
               <linearGradient id="area-fill" x1="0" y1="0" x2="0" y2="1">
                 <stop stop-color="#10b981" offset="0%" stop-opacity="0.4"></stop>
@@ -38,7 +38,7 @@
          <h2 class="text-2xl text-green-700">3,292,745</h2>
       </div>
       <div id="button" class="mt-4">
-        <router-link to="/" class="bg-green-600 text-white text-lg py-1 px-3 rounded-md">CONTACT SUPPORT</router-link>
+        <router-link to="/support" class="bg-green-600 text-white text-lg py-1 px-3 rounded-md">CONTACT SUPPORT</router-link>
       </div>
     </section>
 

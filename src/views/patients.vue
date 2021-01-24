@@ -4,7 +4,7 @@
 
     <section class="bg-gray-100 w-10/12 p-4 sm:w-full sm:p-2">
         <header class="flex items-center">
-            <h1 class="text-3xl font-bold text-green-800">patiënten</h1>
+            <h1 class="text-3xl font-bold text-green-800 sm:text-2xl">patiënten</h1>
             <div id="search-box" class="w-2/3 border-gray-400 border-2 rounded-2xl ml-40 flex h-8 sm:ml-20">
                 <input type="text" placeholder="Zoek Recepten" class="w-11/12 bg-transparent focus:outline-none pl-2 sm:w-9/12">
                 <button class="bg-green-500 text-white w-1/12 rounded-full sm:w-3/12">GA</button>

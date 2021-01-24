@@ -1,0 +1,29 @@
+{
+    "name":"pwa test app",
+    "short_name":"eagle-app",
+    "icons":[
+       {
+          "src":"./assets/images/nutritions-icon.png",
+          "type":"image/png",
+          "sizes":"144x144"
+       },
+       {
+          "src":"./assets/images/nutritions-icon.png",
+          "type":"image/png",
+          "sizes":"192x192"
+       },
+       {
+          "src":"./assets/images/nutritions-icon.png",
+          "type":"image/png",
+          "sizes":"512x512"
+       }
+          ],
+    "start_url":"./index.html",
+    "scope":".",
+    "display":"fullscreen",
+    "orientation":"portrait-primary",
+    "background_color":"green",
+    "theme_color":"green",
+    "dir":"ltr",
+    "language":"en-US"
+}

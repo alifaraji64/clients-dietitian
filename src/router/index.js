@@ -40,6 +40,31 @@ const routes = [
     name: 'profile-detail',
     component: () => import("../views/profile-detail.vue"),
   },
+  {
+    path: '/support',
+    name: 'support',
+    component: () => import("../views/support.vue"),
+  },
+  {
+    path: '/recipe-list',
+    name: 'recipe-list',
+    component: () => import("../views/recipe-list.vue"),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import("../views/login.vue"),
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import("../views/register.vue"),
+  },
+  {
+    path: '/password',
+    name: 'password',
+    component: () => import("../views/password.vue"),
+  },
 ]
 
 const router = new VueRouter({

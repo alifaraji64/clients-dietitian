@@ -12,7 +12,7 @@
         </header>
         <div id="links" class="flex justify-start text-white my-8">
             <router-link to="/new-recipes" class="bg-green-500 mx-2 p-2 rounded-xl">Nieuw Recept</router-link>
-            <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Mijn Recepten</router-link>
+            <router-link to="/recipe-list" class="bg-green-500 mx-2 p-2 rounded-xl">Mijn Recepten</router-link>
             <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Recept Promoten</router-link>
         </div>
         <div id="main" class="border-2 border-gray-400 rounded-md p-3 sm:p-2 flex">

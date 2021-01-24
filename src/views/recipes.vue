@@ -1,24 +1,24 @@
 <template>
-  <main class="flex min-h-screen pb-24">
+  <main class="flex min-h-screen sm:pb-24">
     <SideBar />
 
     <section class="bg-gray-100 w-10/12 p-4 sm:w-full">
         <header class="flex items-center justify-between">
-            <h1 class="text-3xl font-bold text-green-800">Recepten</h1>
-            <div id="search-box" class="w-2/5 border-gray-400 border-2 rounded-2xl ml-40 flex h-8 sm:ml-4">
+            <h1 class="text-3xl font-bold text-green-800 sm:text-2xl">Recepten</h1>
+            <div id="search-box" class="w-2/5 border-gray-400 border-2 rounded-2xl ml-40 flex h-8 sm:h-6 sm:mr-1 sm:ml-4">
                 <input type="text" placeholder="Zoek Recepten" class="w-11/12 bg-transparent focus:outline-none pl-2 sm:w-9/12">
                 <button class="bg-green-500 text-white w-1/12 rounded-full sm:w-3/12">GA</button>
             </div>
             <div id="icons" class="-mr-16 z-10 sm:m-0 flex items-center ">
-                <i class="far fa-bell fa-2x cursor-pointer"></i>
-                <div id="profile-image" class="cursor-pointer w-10 p-0.5 rounded-md bg-blue-400 flex justify-center items-end ml-4">
-                    <i class="fas fa-user-alt fa-2x text-white"></i>
+                <i class="far fa-bell fa-2x cursor-pointer sm:text-lg"></i>
+                <div id="profile-image" class="cursor-pointer w-10 p-0.5 rounded-md bg-blue-400 flex justify-center items-end ml-4 sm:ml-2 sm:w-8 sm:p-0">
+                    <i class="fas fa-user-alt fa-2x text-white sm:text-lg"></i>
                 </div>
             </div>
         </header>
         <div id="links" class="flex justify-start text-white my-8">
             <router-link to="/new-recipes" class="bg-green-500 mx-2 p-2 rounded-xl">Nieuw Recept</router-link>
-            <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Mijn Recepten</router-link>
+            <router-link to="/recipe-list" class="bg-green-500 mx-2 p-2 rounded-xl">Mijn Recepten</router-link>
             <router-link to="#" class="bg-green-500 mx-2 p-2 rounded-xl">Recept Promoten</router-link>
         </div>
         <div id="main" class="border-2 border-gray-400 rounded-md p-3 sm:p-2">

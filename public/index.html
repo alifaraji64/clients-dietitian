@@ -7,24 +7,24 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <style>
-      /* body{
-        background-color: rgb(24, 24, 24);
-        display: flex;
-        justify-content: center;
-      }
-      #app{
-        width:1700px;
-        max-width: 1700px;
-      } */
-      
-    </style>
+    <link rel="manifest" href="./manifest.json" />
+    <!-- for safari we have to add some other meta tags to make it similar!! to pwa -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="PWAGram" />
+		<link rel="apple-touch-icon" href="./assets/images/nutritions-icon.png" />
+	<!-- for safari we have to add some other meta tags to make it similar!! to pwa -->
+	<!-- for internet explorer -->
+		<meta name="msapplication-TileImage" content="./assets/images/nutritions-icon.png"/>
+		<meta name="msapplication-TileColor" content="#fff" />
+    <meta name="theme-color" content="#3f51b5" />
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <script src="./assets/js/app.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- built files will be auto injected -->
   </body>
