@@ -1,9 +1,12 @@
 <template>
   <main class="min-h-screen bg-gray-100">
-      <nav class="bg-green-600 px-2 flex">
+      <nav class="bg-green-600 px-2 flex justify-between">
           <router-link to="/" class="">
             <img src="@/assets/images/nutritions-icon.png" alt="logo" class="w-20 transform scale-170 translate-x-10">
           </router-link>
+          <div class="flex items-center">
+             <button class="bg-gray-100 px-1 py-1 rounded-sm text-green-700">Vrag Demo Aan</button>
+          </div>
       </nav>
       <section id="main">
                 <div id="form" class="w-2/3 p-3 mx-auto mt-20 sm:mt-4">

@@ -19,7 +19,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
         // window.addEventListener('click',()=>{
         //     deferredPrompt.prompt();
         // })
-
         // Wait for the user to respond to the prompt
         deferredPrompt.userChoice.then((choiceResult) => {
             if (choiceResult.outcome === 'accepted') {

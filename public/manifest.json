@@ -1,19 +1,19 @@
 {
-    "name":"pwa test app",
-    "short_name":"eagle-app",
+    "name":"AllergynClub",
+    "short_name":"AllergynClub",
     "icons":[
        {
-          "src":"./assets/images/nutritions-icon.png",
+          "src":"./assets/images/logo.png",
           "type":"image/png",
           "sizes":"144x144"
        },
        {
-          "src":"./assets/images/nutritions-icon.png",
+          "src":"./assets/images/logo.png",
           "type":"image/png",
           "sizes":"192x192"
        },
        {
-          "src":"./assets/images/nutritions-icon.png",
+          "src":"./assets/images/logo.png",
           "type":"image/png",
           "sizes":"512x512"
        }
